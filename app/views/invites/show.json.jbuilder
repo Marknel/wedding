@@ -1,0 +1,1 @@
+json.extract! @invite, :id, :name, :url, :dietry_requirements, :invited_to_ceremony, :invited_to_reception, :attending_ceremony, :attending_reception, :first_viewed_at, :most_recently_viewed_at, :created_at, :updated_at

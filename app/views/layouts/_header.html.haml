@@ -1,0 +1,50 @@
+%nav.navbar.navbar-default{ role: "navigation" }
+  .navbar-header
+    %button.navbar-toggle{ type: "button", data: { toggle: "collapse", target: "#bs-example-navbar-collapse-1" } }
+      %span.sr-only Toggle navigation
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+      
+    %a.navbar-brand{ href: "/" } Regine & Mark's Wedding
+
+  #bs-example-navbar-collapse-1.collapse.navbar-collapse
+    %ul.nav.navbar-nav
+      %li
+        - unless cookies[:user_url] == nil
+          %a{ href: "/#{cookies[:user_url]}" } Your Invite
+/       <li><a href="#">Link</a></li>
+/       <li class="dropdown">
+/         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+/         <ul class="dropdown-menu">
+/           <li><a href="#">Action</a></li>
+/           <li><a href="#">Another action</a></li>
+/           <li><a href="#">Something else here</a></li>
+/           <li class="divider"></li>
+/           <li><a href="#">Separated link</a></li>
+/           <li class="divider"></li>
+/           <li><a href="#">One more separated link</a></li>
+/         </ul>
+/       </li>
+/     </ul>
+/     <form class="navbar-form navbar-left" role="search">
+/       <div class="form-group">
+/         <input type="text" class="form-control" placeholder="Search">
+/       </div>
+/       <button type="submit" class="btn btn-default">Submit</button>
+/     </form>
+/     <ul class="nav navbar-nav navbar-right">
+/       <li><a href="#">Link</a></li>
+/       <li class="dropdown">
+/         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+/         <ul class="dropdown-menu">
+/           <li><a href="#">Action</a></li>
+/           <li><a href="#">Another action</a></li>
+/           <li><a href="#">Something else here</a></li>
+/           <li class="divider"></li>
+/           <li><a href="#">Separated link</a></li>
+/         </ul>
+/       </li>
+/     </ul>
+/   </div><!-- /.navbar-collapse -->
+/ </nav>

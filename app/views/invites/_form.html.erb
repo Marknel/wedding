@@ -1,0 +1,53 @@
+<%= form_for(@invite) do |f| %>
+  <% if @invite.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@invite.errors.count, "error") %> prohibited this invite from being saved:</h2>
+
+      <ul>
+      <% @invite.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :dietry_requirements %><br>
+    <%= f.text_area :dietry_requirements %>
+  </div>
+  <div class="field">
+    <%= f.label :invited_to_ceremony %><br>
+    <%= f.check_box :invited_to_ceremony, checked: true %>
+  </div>
+  <div class="field">
+    <%= f.label :invited_to_reception %><br>
+    <%= f.check_box :invited_to_reception, checked: true %>
+  </div>
+  <div class="field">
+    <%= f.label :attending_ceremony %><br>
+    <%= f.number_field :attending_ceremony %>
+  </div>
+  <div class="field">
+    <%= f.label :attending_reception %><br>
+    <%= f.number_field :attending_reception %>
+  </div>
+  <div class="field">
+    <%= f.label :first_viewed_at %><br>
+    <%= f.datetime_select :first_viewed_at, default: Time.now - 3.years %>
+  </div>
+  <div class="field">
+    <%= f.label :most_recently_viewed_at %><br>
+    <%= f.datetime_select :most_recently_viewed_at, default: Time.now - 3.years %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

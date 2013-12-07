@@ -1,0 +1,19 @@
+.container
+  %p{id: "notice"}
+    = notice
+
+  %p.lead= @invite.name
+  
+  %p You are invited to join
+  
+  %p
+    %strong Dietry requirements:
+    = @invite.dietry_requirements
+
+  - if @invite.invited_to_ceremony
+    %p Will you attend our ceremony?
+    = @invite.attending_ceremony
+  
+  - if @invite.invited_to_reception
+    %p Will you attend our recption?
+    = @invite.attending_reception

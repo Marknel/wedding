@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  url: MyString
+  dietry_requirements: MyText
+  invited_to_ceremony: false
+  invited_to_reception: false
+  attending_ceremony: 1
+  attending_reception: 1
+  first_viewed_at: 2013-12-07 23:26:31
+  most_recently_viewed_at: 2013-12-07 23:26:31
+
+two:
+  name: MyString
+  url: MyString
+  dietry_requirements: MyText
+  invited_to_ceremony: false
+  invited_to_reception: false
+  attending_ceremony: 1
+  attending_reception: 1
+  first_viewed_at: 2013-12-07 23:26:31
+  most_recently_viewed_at: 2013-12-07 23:26:31
