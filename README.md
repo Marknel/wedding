@@ -30,9 +30,19 @@ The invite model contains:
 * First viewed at - datetime
 * Most recently viewed at - datetime
 
+Pages:
+
+* Our Story
+* Your Invite (optional)
+* Hotels/Venues we recommend
+* Locations
+* Registry (link away)
+* Welcome Page
+
 
 #### Jobs to do
 * Lock out public access to invites#index
+* Build ability for guests to respond (via the Show page)
 
 
 #### Questions for Nathan

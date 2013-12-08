@@ -12,8 +12,12 @@
 
   - if @invite.invited_to_ceremony
     %p Will you attend our ceremony?
-    = @invite.attending_ceremony
+    .btn-group
+      %button.btn.btn-success.ceremony{ type: "button" } Yes
+      %button.btn.btn-danger.cerenony{ type: "button"} No    
   
   - if @invite.invited_to_reception
     %p Will you attend our recption?
-    = @invite.attending_reception
+    .btn-group
+      %button.btn.btn-success{ type: "button"} Yes
+      %button.btn.btn-danger{ type: "button"} No    
