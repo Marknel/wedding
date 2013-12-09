@@ -1,3 +1,30 @@
 // Place all the styles related to the Invites controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h3.panel-title {
+  a:hover {
+    background-color: rgba(0,0,0,0);
+    color: #111;
+  }
+}
+
+.btn-link.danger {
+  color: #a94442;
+  float: right;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.invite-show {
+  .panel {
+    overflow: auto;
+    
+    p {
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-top: 5px;
+      text-align: justify;
+    }
+  }
+}
