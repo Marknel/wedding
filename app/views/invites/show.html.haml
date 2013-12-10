@@ -16,44 +16,46 @@
       - if [nil, 0].include? @invite.attending_ceremony
         %p We'd love for you to attend our wedding ceremony. Can you make it?
         .btn-group
-          %button.btn.btn-success.ceremony{ type: "button", data: { invite_id: "#{@invite.id}" } } I'm coming!
-          %button.btn.btn-danger.ceremony{ type: "button", data: { invite_id: "#{@invite.id}" } } I can't make it
+          %button.btn.btn-success.ceremony{ type: "button", data: { invite_id: "#{@invite.id}" } } We're coming!
+          %button.btn.btn-danger.ceremony{ type: "button", data: { invite_id: "#{@invite.id}" } } We can't make it
 
       - elsif @invite.attending_ceremony == 1
         %p
           That's great you can come! We look forward to seeing you at our wedding ceremony. If you have changed
           your mind and aren't able to make it anymore, you can let us know by pressing the button below.
-        %button.btn-xs.btn-link.danger.ceremony{ type: "button", data: { invite_id: "#{@invite.id}" } } I can't come after all
+        %button.btn-xs.btn-link.danger.ceremony{ type: "button", data: { invite_id: "#{@invite.id}" } } We can't come after all
   
       - elsif @invite.attending_ceremony == 2
         %p
           We're sorry to hear that you can't make it to our ceremony. We would sincerely appreciate it 
           if you could make it. If you are able to come, you can let us know by pressing the button below.
-        %button.btn.btn-success.ceremony{ type: "button", data: { invite_id: "#{@invite.id}" } } I am able to attend!
+        %button.btn.btn-success.ceremony{ type: "button", data: { invite_id: "#{@invite.id}" } } We are able to attend!
   
   - if @invite.invited_to_reception
-    %h3
-      Reception
-      %small Held at Cha Cha Char at the Eagle Street Pier, Brisbane
+    .panel{ class: "panel-#{([nil, 0, 2].include? @invite.attending_reception) ? 'danger' : 'success'}" }
+      .panel-heading
+        %h3.panel-title
+          Reception
+          %small= link_to "Held at Cha Cha Char at the Eagle Street Pier, Brisbane", :locations
 
-    - if @invite.attending_reception == nil || @invite.attending_reception == 0
-      %p We'd love for you to attend our wedding reception. Can you make it?
-      .btn-group
-        %button.btn.btn-success.reception{ type: "button", data: { invite_id: "#{@invite.id}" } } I'm coming!
-        %button.btn.btn-danger.reception{ type: "button", data: { invite_id: "#{@invite.id}" } } I can't make it
+      - if @invite.attending_reception == nil || @invite.attending_reception == 0
+        %p We'd love for you to attend our wedding reception. Can you make it?
+        .btn-group
+          %button.btn.btn-success.reception{ type: "button", data: { invite_id: "#{@invite.id}" } } We're coming!
+          %button.btn.btn-danger.reception{ type: "button", data: { invite_id: "#{@invite.id}" } } We can't make it
 
     
-    - elsif @invite.attending_reception == 1
-      %p
-        That's great you can come! We look forward to seeing you at our wedding reception. If you have changed
-        your mind and aren't able to make it anymore, you can let us know by pressing the button below.
-      %button.btn.btn-danger.reception{ type: "button", data: { invite_id: "#{@invite.id}" } } I can't come after all
+      - elsif @invite.attending_reception == 1
+        %p
+          That's great you can come! We look forward to seeing you at our wedding reception. If you have changed
+          your mind and aren't able to make it anymore, you can let us know by pressing the button below.
+        %button.btn-xs.btn-link.danger.reception{ type: "button", data: { invite_id: "#{@invite.id}" } } We can't come after all
   
-    - elsif @invite.attending_reception == 2
-      %p
-        We're sorry to hear that you can't make it to our reception. We would sincerely appreciate it 
-        if you could make it. If you are able to come, you can let us know by pressing the button below.
-      %button.btn.btn-success.reception{ type: "button", data: { invite_id: "#{@invite.id}" } } I am able to attend!    
+      - elsif @invite.attending_reception == 2
+        %p
+          We're sorry to hear that you can't make it to our reception. We would sincerely appreciate it 
+          if you could make it. If you are able to come, you can let us know by pressing the button below.
+        %button.btn.btn-success.reception{ type: "button", data: { invite_id: "#{@invite.id}" } } We are able to attend!    
 
   %h3
     Dietry Requirements
