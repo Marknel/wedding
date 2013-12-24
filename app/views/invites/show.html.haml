@@ -62,6 +62,6 @@
     %br
     %small Aside from great food and drink, do you have any specific dietary requirements?
   .input-group
-    %input.form-control{ type: "text", placeholder: "" }
+    %input.form-control.dietry_requirements{ type: "text", placeholder: "#{@invite.dietry_requirements.empty? ? 'Great steak!' : @invite.dietry_requirements}" }
     %span.input-group-btn
-      %button.btn.btn-success{ type: "button" } Submit
+      %button.btn.btn-success.dietry_requirements{ type: "button", data: { invite_id: "#{@invite.id}" } } Submit

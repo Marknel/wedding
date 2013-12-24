@@ -4,7 +4,11 @@ class InvitesController < ApplicationController
   # GET /invites
   # GET /invites.json
   def index
-    @invites = Invite.all
+    if params[:admin] == "1"
+      @invites = Invite.all
+    else
+      render file: "#{Rails.root}/public/403.html", status: 403, layout: false
+    end
   end
 
   # GET /invites/1

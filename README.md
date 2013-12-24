@@ -41,7 +41,6 @@ Pages:
 
 
 #### Jobs to do
-* Lock out public access to invites#index
 * Build ability for guests to respond (via the Show page)
 
 
