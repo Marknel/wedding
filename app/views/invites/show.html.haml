@@ -57,11 +57,14 @@
           if you could make it. If you are able to come, you can let us know by pressing the button below.
         %button.btn.btn-success.reception{ type: "button", data: { invite_id: "#{@invite.id}" } } We are able to attend!    
 
-  %h3
-    Dietry Requirements
-    %br
-    %small Aside from great food and drink, do you have any specific dietary requirements?
-  .input-group
-    %input.form-control.dietry_requirements{ type: "text", placeholder: "#{@invite.dietry_requirements.empty? ? 'Great steak!' : @invite.dietry_requirements}" }
-    %span.input-group-btn
-      %button.btn.btn-success.dietry_requirements{ type: "button", data: { invite_id: "#{@invite.id}" } } Submit
+  - if @invite.invited_to_reception
+    %h3
+      Dietry Requirements
+    %p
+      Cha Cha Char is one the best steak restaurants in Australia. There will be a wide selection of 100% organic beef, seafood and
+      poultry available on the menu for our guests. We do understand that some persons may have allergies and other requirements. If
+      this is you, please let us know in the field below.
+    .input-group
+      %input.form-control.dietry_requirements{ type: "text", placeholder: "#{@invite.dietry_requirements.empty? ? 'Great food and drink!' : @invite.dietry_requirements}" }
+      %span.input-group-btn
+        %button.btn.btn-success.dietry_requirements{ type: "button", data: { invite_id: "#{@invite.id}" } } Submit

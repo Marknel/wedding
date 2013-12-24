@@ -1,0 +1,15 @@
+footer {
+  background: #888;
+  border-top: solid 1px #333;
+  color: white;
+  p {
+    margin: 0 auto;
+    
+    a {
+      color: #DDD !important;
+    }
+    a:hover {
+      color: #ccc !important;
+    }
+  }
+}
