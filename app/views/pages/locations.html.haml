@@ -1,4 +1,36 @@
-.container
-  %h1 Locations
-  
-  
+.container.locations
+  %h1
+    Locations
+    %small
+      = link_to "map", "https://mapsengine.google.com/map/edit?mid=zYOmb_Eq6u84.k-ZCrsL62uxU", target: "_blank"
+
+  .row
+    .col-md-6
+      %h2 Ceremony Location
+      %p 
+        Regine and Mark will be married at the Roma Street Parklands, at
+        %em The Flying Duck.
+        The map provided on this page has the area highlighted.
+
+      %h3 Ceremony Parking
+      %p
+        There are several options available for parking for the wedding ceremony. The Parklands have small amounts of parking surrounding almost the entire area. Furthermore there is a drop-off zone at the carriage shed which is a relatively short walk from the Flying Duck.
+
+
+      %h2 Reception Location
+      %p
+        The wedding reception is being held at Brisbane's signature steak restaurant, Cha Cha Char.
+
+        The reception itself will be in Cha Cha Char's adjacent private dining room.
+
+      %p 
+        You can read more about Cha Cha Char on their website:
+        = link_to "Cha Cha Char", "http://chachachar.com.au", target: "_blank"
+
+      %h3 Reception Parking
+      %p
+        There is parking available for $10 directly below Cha Cha Char. Free street parking is also available, however, given the time and day, it is unlikely that any will be free of vehicles. The location of the entrance to the underground carpark for Cha Cha Char is displayed on the map link at the top of this page.
+
+    .col-md-6
+      %h2 Roma Street Parklands Map
+      .map-preview= link_to image_tag("rsp_general_map.jpg", alt: "Roma Street Parklands map", title: "Click to view full size.", class: "img-thumbnail"), "/rsp_general_map.pdf"
