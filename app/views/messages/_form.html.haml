@@ -6,11 +6,20 @@
         - @message.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label :from
-    = f.text_field :from
-  .field
-    = f.label :message
-    = f.text_area :message
-  .actions
-    = f.submit 'Save'
+  .form-horizontal
+    .form-group
+      .field
+        = f.label :from, class: "col-sm-2 control-label"
+        .col-sm-10
+          = f.text_field :from, class: "form-control", placeholder: "Name(s)"
+
+    .form-group
+      .field
+        = f.label :message, class: "col-sm-2 control-label"
+        .col-sm-10
+          = f.text_field :message, class: "form-control", placeholder: "Your message..."
+
+    .form-group
+      .col-sm-offset-2.col-sm-10
+        .actions
+          = f.submit 'Leave Message', class: "btn btn-success"

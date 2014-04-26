@@ -1,3 +1,16 @@
 // Place all the styles related to the Messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container.guestbook {
+
+  h1 {
+    text-align: center;
+  }
+
+  .new-message {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+}

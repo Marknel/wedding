@@ -1,21 +1,30 @@
-%h1 Listing messages
+.container.guestbook
+  %h1 Guest Book
 
-%table
-  %tr
-    %th From
-    %th Message
-    %th
-    %th
-    %th
+  .new-message
+    = button_to('Leave us a Message', new_message_path, :class => 'btn btn-large btn-primary', method: :get)
 
-  - @messages.each do |message|
+
+
+
+
+
+  %table
     %tr
-      %td= message.from
-      %td= message.message
-      %td= link_to 'Show', message
-      %td= link_to 'Edit', edit_message_path(message)
-      %td= link_to 'Destroy', message, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %th From
+      %th Message
+      %th
+      %th
+      %th
 
-%br
+    - @messages.each do |message|
+      %tr
+        %td= message.from
+        %td= message.message
+        %td= link_to 'Show', message
+        %td= link_to 'Edit', edit_message_path(message)
+        %td= link_to 'Destroy', message, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-= link_to 'New Message', new_message_path
+  %br
+
+  = link_to 'New Message', new_message_path
