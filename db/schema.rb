@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131207132631) do
+ActiveRecord::Schema.define(version: 20140426133518) do
 
   create_table "invites", force: true do |t|
     t.string   "name"
@@ -23,6 +23,13 @@ ActiveRecord::Schema.define(version: 20131207132631) do
     t.integer  "attending_reception"
     t.datetime "first_viewed_at"
     t.datetime "most_recently_viewed_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "messages", force: true do |t|
+    t.string   "from"
+    t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

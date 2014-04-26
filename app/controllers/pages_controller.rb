@@ -19,4 +19,9 @@ class PagesController < ApplicationController
   def locations
     
   end
+
+  # GET /schedule
+  def schedule
+    
+  end
 end
