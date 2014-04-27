@@ -1,12 +1,19 @@
-%p#notice= notice
+.container.guestbook
 
-%p
-  %b From:
-  = @message.from
-%p
-  %b Message:
-  = @message.message
+  -# %p#notice= notice
 
-= link_to 'Edit', edit_message_path(@message)
-\|
-= link_to 'Back', messages_path
+  .page-header
+    %h1
+      Thank you for your wishes
+      %br
+      %small= @message.from
+  %p.oversize
+    %b Your Message:
+    = @message.message
+
+  
+  .col-sm-offset-2.col-sm-10
+    .back-button
+      = link_to 'Edit My Message', edit_message_path(@message)
+  .save-button
+    = button_to('Save and Close', messages_path, :class => 'btn btn-large btn-success', method: :get)

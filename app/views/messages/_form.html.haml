@@ -17,9 +17,12 @@
       .field
         = f.label :message, class: "col-sm-2 control-label"
         .col-sm-10
-          = f.text_field :message, class: "form-control", placeholder: "Your message..."
+          = f.text_area :message, class: "form-control", placeholder: "Your message...", rows: "5"
 
     .form-group
-      .col-sm-offset-2.col-sm-10
-        .actions
-          = f.submit 'Leave Message', class: "btn btn-success"
+      .actions
+        .save-button
+          = f.submit 'Save Message', class: "btn btn-success"
+        .col-sm-offset-2.col-sm-10
+          .back-button
+            = link_to 'Go Back', messages_path
