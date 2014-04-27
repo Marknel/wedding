@@ -25,4 +25,13 @@
     font-size: 130%;
   }
 
+  .new-message {
+    margin-bottom: 20px;
+  }
+
+  .thumbnail {
+    height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
