@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @job.name
+%p
+  %b Due at:
+  = @job.due_at
+%p
+  %b Person responsible:
+  = @job.person_responsible
+%p
+  %b Location:
+  = @job.location
+%p
+  %b Maps url:
+  = @job.maps_url
+%p
+  %b Notes:
+  = @job.notes
+
+= link_to 'Edit', edit_job_path(@job)
+\|
+= link_to 'Back', jobs_path

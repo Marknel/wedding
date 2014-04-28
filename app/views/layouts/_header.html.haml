@@ -13,9 +13,7 @@
       - unless cookies[:user_url] == nil
         %li
           %a{ href: "/#{cookies[:user_url]}" } Your Invite
-      / %li= link_to "Locations", :locations
       / %li= link_to "Recommendations", :recommendations
       %li= link_to "Locations", :locations
       %li= link_to "Guest Book", :messages
-      %li= link_to "Schedule", :schedule
       %li= link_to "Registry", :registry, target: "_blank"

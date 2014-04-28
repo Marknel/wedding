@@ -1,4 +1,6 @@
 Wedding::Application.routes.draw do
+  resources :jobs
+
   resources :messages
 
   resources :invites

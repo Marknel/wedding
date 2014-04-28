@@ -1,0 +1,35 @@
+.container.schedule
+  %h1
+    Wedding Schedule
+  
+  = button_to 'New Job', new_job_path, class: "btn btn-primary btn-large", method: :get
+  %br
+
+  - @jobs.each do |job|
+    .row
+      .time-container{class: "#{Time.now > job.due_at ? 'past' : ''}"}
+        .col-sm-2
+          .time{class: "#{Time.now > job.due_at ? 'past' : ''}"}
+            %h4= job.due_at.to_s(:short)
+        .col-sm-9
+          .job
+            %h4= job.name
+            %p
+              %b Location:
+              = link_to job.location, job.maps_url
+            %p
+              %b Responsible:
+              = job.person_responsible
+            - unless job.notes.nil? || job.notes == ""
+              %p
+                %b Additional Notes:
+                %i= job.notes
+        .col-sm-1
+          = link_to 'Edit', edit_job_path(job)
+          = link_to 'Destroy', job, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "danger"
+
+
+
+  
+
+  
