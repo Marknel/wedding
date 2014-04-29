@@ -38,12 +38,3 @@ Pages:
 * Locations
 * Registry (link away)
 * Welcome Page
-
-
-#### Jobs to do
-* Build ability for guests to respond (via the Show page)
-
-
-#### Questions for Nathan
-* How to do a before filter to verify that the newly set URL is unique
-* How to redirect to invites#index after creating a new record
