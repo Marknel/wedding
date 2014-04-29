@@ -32,9 +32,10 @@ The invite model contains:
 
 Pages:
 
-* Our Story
-* Your Invite (optional)
-* Hotels/Venues we recommend
-* Locations
-* Registry (link away)
 * Welcome Page
+* Your Invite (optional)
+* Locations
+* Guest Book
+* Seating Chart
+* Schedule (hidden)
+* Registry (link away)

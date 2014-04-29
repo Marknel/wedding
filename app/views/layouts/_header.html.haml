@@ -11,9 +11,13 @@
   #bs-example-navbar-collapse-1.collapse.navbar-collapse
     %ul.nav.navbar-nav
       - unless cookies[:user_url] == nil
-        %li
+        %li{ class: "#{ params[:controller] == 'invites' ? 'active' : '' }" }
           %a{ href: "/#{cookies[:user_url]}" } Your Invite
-      / %li= link_to "Recommendations", :recommendations
-      %li= link_to "Locations", :locations
-      %li= link_to "Guest Book", :messages
+
+      - unless cookies[:accessed_jobs] == nil
+        %li{ class: "#{ params[:controller] == 'jobs' ? 'active' : '' }" }= link_to "Schedule", :jobs
+
+      %li{ class: "#{ params[:action] == 'locations' ? 'active' : '' }" }= link_to "Locations", :locations
+      %li{ class: "#{ params[:controller] == 'messages' ? 'active' : '' }" }= link_to "Guest Book", :messages
+      %li= link_to "Find Your Seat", "/seating_plan.png", target: "_blank"
       %li= link_to "Registry", :registry, target: "_blank"

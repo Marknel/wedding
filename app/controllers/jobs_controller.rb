@@ -5,6 +5,9 @@ class JobsController < ApplicationController
   # GET /jobs.json
   def index
     @jobs = Job.all.order("due_at")
+
+    # Here we set a cookie so that users accessing this page will have appear in their navigation system
+    cookies[:accessed_jobs] = true
   end
 
   # GET /jobs/1
