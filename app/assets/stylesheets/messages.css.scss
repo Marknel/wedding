@@ -31,7 +31,10 @@
 
   .thumbnail {
     height: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
+
+  .thumbnail:hover {
+    height: 300px;
+  }
+  
 }

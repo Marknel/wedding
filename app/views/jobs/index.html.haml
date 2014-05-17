@@ -7,11 +7,11 @@
 
   - @jobs.each do |job|
     .row
-      .time-container{class: "#{Time.now > job.due_at ? 'past' : ''}"}
+      .time-container
         .col-sm-2
-          .time{class: "#{Time.now > job.due_at ? 'past' : ''}"}
+          .time
             %h4= job.due_at.to_s(:short)
-        .col-sm-9
+        .col-sm-9{class: "#{(Time.now + 10.hours) > job.due_at ? 'past' : ''}"}
           .job
             %h4= job.name
             %p
@@ -27,9 +27,3 @@
         .col-sm-1
           = link_to 'Edit', edit_job_path(job)
           = link_to 'Destroy', job, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "danger"
-
-
-
-  
-
-  
